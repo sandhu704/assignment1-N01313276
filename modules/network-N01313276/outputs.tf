@@ -11,8 +11,8 @@ output "subnet1_space" {
   value = azurerm_subnet.subnet1.address_prefixes
 }
 
-output "ng1_name"{
-    value = azurerm_network_security_group.nsg1.name
+output "ng1_name" {
+  value = azurerm_network_security_group.nsg1.name
 }
 
 output "subnet1_id" {

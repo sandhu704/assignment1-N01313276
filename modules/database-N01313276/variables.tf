@@ -1,31 +1,31 @@
 locals {
   common_tags = {
-    Assignment = "CCGC 5502 Automation Assignment"
-    Name = "Yuvraj.Sandhu"
+    Assignment     = "CCGC 5502 Automation Assignment"
+    Name           = "Yuvraj.Sandhu"
     ExpirationDate = "2024-12-31"
-    Environment = "Learning"
+    Environment    = "Learning"
   }
 }
 variable "common_tags" {
-    type = map(string) 
-    default = {
-    Assignment = "CCGC 5502 Automation Assignment"
-    Name = "Yuvraj.Sandhu"
+  type = map(string)
+  default = {
+    Assignment     = "CCGC 5502 Automation Assignment"
+    Name           = "Yuvraj.Sandhu"
     ExpirationDate = "2024-12-31"
-    Environment = "Learning"
-    }
-  
+    Environment    = "Learning"
+  }
+
 }
 
 variable "rg" {
-  default     = "N01313276-RG"
-  type        = string
+  default = "N01313276-RG"
+  type    = string
 }
 variable "location" {
   default = "canadacentral"
 }
 variable "resource_group" {
-  default = "resource_group"  
+  default = "resource_group"
 }
 variable "postgres_server_name" {
   description = "Specifies the name of the PostgreSQL Server."
@@ -52,7 +52,7 @@ variable "postgres_sku_name" {
 variable "postgres_storage_mb" {
   description = "Max storage allowed for the PostgreSQL server in MB."
   type        = number
-  default     = 5120  # 5GB
+  default     = 5120 # 5GB
 }
 
 variable "backup_retention_days" {

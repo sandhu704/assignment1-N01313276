@@ -17,11 +17,11 @@ output "storage_account" {
   value = module.common-N01313276.storage_account
 }
 
-output "linux_hostnames"{
+output "linux_hostnames" {
   value = module.vmlinux-N01313276.linux_hostnames
 }
 
-  output "linux_dns_names" {
+output "linux_dns_names" {
   value = module.vmlinux-N01313276.linux_dns_names
 }
 output "linux_private_ips" {
@@ -40,12 +40,12 @@ output "windows_public_ip" {
   value = module.vmwindows-N01313276.windows_public_ip
 }
 output "windows_dns_name" {
-   value = module.vmwindows-N01313276.windows_dns_name
+  value = module.vmwindows-N01313276.windows_dns_name
 }
-output "linux_ids"{
+output "linux_ids" {
   value = module.vmlinux-N01313276.linux_ids
 }
-output "load_balancer_name"{
+output "load_balancer_name" {
   value = module.loadbalancer-N01313276.load_balancer_name
 }
 output "postgresql_server_name" {

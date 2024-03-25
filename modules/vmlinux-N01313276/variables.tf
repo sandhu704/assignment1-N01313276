@@ -1,9 +1,9 @@
 locals {
   common_tags = {
-    Assignment = "CCGC 5502 Automation Assignment"
-    Name = "Yuvraj.Sandhu"
+    Assignment     = "CCGC 5502 Automation Assignment"
+    Name           = "Yuvraj.Sandhu"
     ExpirationDate = "2024-12-31"
-    Environment = "Learning"
+    Environment    = "Learning"
   }
 }
 variable "linux_name" {
@@ -48,7 +48,7 @@ variable "rg" {
   description = "This resource group is to"
 }
 variable "resource_group" {
-  default = "N01313276-RG"  
+  default = "N01313276-RG"
 }
 variable "location" {
   default = "canadacentral"
@@ -58,7 +58,7 @@ variable "subnet_id" {
 }
 variable "NetworkWatchVer" {
   default = "l.0"
-  type = string
+  type    = string
 }
 variable "storage_account_uri" {
   type = string

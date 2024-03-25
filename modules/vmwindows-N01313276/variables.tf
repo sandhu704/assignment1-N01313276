@@ -1,9 +1,9 @@
 locals {
   common_tags = {
-    Name = "Terraform-Class"
-    Project = "Learning"
+    Name         = "Terraform-Class"
+    Project      = "Learning"
     ContactEmail = "n01313276@humber.ca"
-    Environment = "Test"
+    Environment  = "Test"
   }
 }
 variable "windows_avs" {
@@ -14,11 +14,11 @@ variable "wos_disk_attr" {
   default = {
     wos_storage_account_type = "Premium_LRS"
     wos_disk_size            = "128"
-    wos_disk_caching              = "ReadWrite"
+    wos_disk_caching         = "ReadWrite"
   }
 }
 variable "windows_admin_user" {
-  default ="winadm"
+  default = "winadm"
 }
 variable "windows_os" {
   default = {
@@ -44,7 +44,7 @@ variable "rg" {
   description = "This resource group is to"
 }
 variable "resource_group" {
-  default = "N01313276-RG"  
+  default = "N01313276-RG"
 }
 variable "subnet_id" {
   type = string
@@ -58,5 +58,5 @@ variable "storage_account_uri" {
 }
 variable "AntimalwareVer" {
   default = "1.0"
-  type = string
+  type    = string
 }

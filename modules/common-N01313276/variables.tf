@@ -1,20 +1,20 @@
 locals {
   common_tags = {
-    Assignment = "CCGC 5502 Automation Assignment"
-    Name = "Yuvraj.Sandhu"
+    Assignment     = "CCGC 5502 Automation Assignment"
+    Name           = "Yuvraj.Sandhu"
     ExpirationDate = "2024-12-31"
-    Environment = "Learning"
+    Environment    = "Learning"
   }
 }
 variable "common_tags" {
-    type = map(string) 
-    default = {
-    Assignment = "CCGC 5502 Automation Assignment"
-    Name = "Yuvraj.Sandhu"
+  type = map(string)
+  default = {
+    Assignment     = "CCGC 5502 Automation Assignment"
+    Name           = "Yuvraj.Sandhu"
     ExpirationDate = "2024-12-31"
-    Environment = "Learning"
-    }
-  
+    Environment    = "Learning"
+  }
+
 }
 
 variable "log_analytics_workspace" {

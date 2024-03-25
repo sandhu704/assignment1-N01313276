@@ -10,7 +10,7 @@ resource "azurerm_postgresql_server" "assignment1db" {
   storage_mb = var.postgres_storage_mb
   version    = var.postgres_version
 
-  backup_retention_days        = var.backup_retention_days
-  ssl_enforcement_enabled      = var.postgres-ssl_enforcement_enabled
-  tags = var.common_tags
+  backup_retention_days   = var.backup_retention_days
+  ssl_enforcement_enabled = var.postgres-ssl_enforcement_enabled
+  tags                    = var.common_tags
 }

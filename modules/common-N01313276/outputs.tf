@@ -8,5 +8,5 @@ output "storage_account" {
   value = azurerm_storage_account.storage_account.name
 }
 output "storage_account_uri" {
-    value = azurerm_storage_account.storage_account.primary_blob_endpoint
+  value = azurerm_storage_account.storage_account.primary_blob_endpoint
 }

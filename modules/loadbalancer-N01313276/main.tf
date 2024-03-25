@@ -4,7 +4,7 @@ resource "azurerm_public_ip" "assignment1lb_pip" {
   resource_group_name = var.rg
   allocation_method   = "Static"
   sku                 = "Basic"
-  tags = var.common_tags
+  tags                = var.common_tags
 }
 
 resource "azurerm_lb" "assignment1lb" {
@@ -12,7 +12,7 @@ resource "azurerm_lb" "assignment1lb" {
   location            = var.location
   resource_group_name = var.rg
   sku                 = "Basic"
-  tags = var.common_tags
+  tags                = var.common_tags
 
   frontend_ip_configuration {
     name                 = var.frontend_ip_configuration_name
@@ -26,11 +26,11 @@ resource "azurerm_lb_backend_address_pool" "assignment1lb_backend_address_pool" 
 }
 
 resource "azurerm_lb_probe" "assignment1lb_probe" {
-  loadbalancer_id     = azurerm_lb.assignment1lb.id
-  name                = "httpProbe"
-  protocol            = "Http"
-  request_path        = "/health"
-  port                = 80
+  loadbalancer_id = azurerm_lb.assignment1lb.id
+  name            = "httpProbe"
+  protocol        = "Http"
+  request_path    = "/health"
+  port            = 80
 }
 
 resource "azurerm_lb_rule" "assignment1lb_rule" {
@@ -44,7 +44,7 @@ resource "azurerm_lb_rule" "assignment1lb_rule" {
 }
 
 resource "azurerm_network_interface_backend_address_pool_association" "main" {
-  for_each               = var.linux_nic_ids
+  for_each                = var.linux_nic_ids
   network_interface_id    = each.value
   ip_configuration_name   = "${each.key}-ipconfig"
   backend_address_pool_id = azurerm_lb_backend_address_pool.assignment1lb_backend_address_pool.id

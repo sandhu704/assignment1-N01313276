@@ -21,5 +21,5 @@ resource "azurerm_storage_account" "storage_account" {
   location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  tags = var.common_tags
+  tags                     = var.common_tags
 }
